@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "256661754520",
+    "project_id": "pokebase-cccf6",
+    "storage_bucket": "pokebase-cccf6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:256661754520:android:225f3d283ddf54582cf6ed",
+        "android_client_info": {
+          "package_name": "com.example.proyecto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "256661754520-50ha79vgg4hb1mj22vlog5rpgl4k7tn4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLXdDuwde4KTdQG4T6WT0_nG7Kw6D_ez0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "256661754520-50ha79vgg4hb1mj22vlog5rpgl4k7tn4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

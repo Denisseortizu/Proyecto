@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.LeftFragment"
+    android:background="@color/fondo"
+    >
+
+    <TextView
+        android:id="@+id/mostrarUsuario"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:text="Perfil"
+        android:textColor="@color/pop_value"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="380dp"
+        android:src="@drawable/ic_baseline_person_24"
+        android:background="@drawable/grad_animation"
+        app:tint="@color/pop_red"
+        app:layout_constraintTop_toBottomOf="@id/mostrarUsuario"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/mostrarNombre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Nombre"
+        android:textAlignment="center"
+        android:fontFamily="@font/roboto"
+        android:textSize="40sp"
+        android:textColor="@color/pop_value"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+         />
+
+    <TextView
+        android:id="@+id/lb_id"
+        android:layout_width="81dp"
+        android:layout_height="68dp"
+        android:layout_marginLeft="10dp"
+        android:text="USERNAME"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/pop_value"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/mostrarNombre"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/lb_nivel"
+        android:layout_width="81dp"
+        android:layout_height="68dp"
+        android:layout_marginLeft="10dp"
+        android:text="NIVEL"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/pop_value"
+        android:layout_marginTop="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/sh_Nivel"
+        app:layout_constraintTop_toBottomOf="@id/mostrarNombre"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/sh_Nivel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="20dp"
+        android:textAlignment="center"
+        android:fontFamily="@font/roboto"
+        android:textSize="40sp"
+        android:textColor="@color/pop_value"
+        android:paddingTop="5dp"
+        android:text="50"
+        app:layout_constraintTop_toBottomOf="@id/mostrarNombre"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/sh_pokedex"
+         />
+
+    <TextView
+        android:id="@+id/sh_pokedex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:textColor="@color/pop_value"
+        android:fontFamily="@font/roboto"
+        android:textSize="40sp"
+        android:paddingTop="5dp"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintLeft_toRightOf="@id/lb_pokedex"
+        app:layout_constraintTop_toBottomOf="@id/sh_Nivel"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+    <TextView
+        android:id="@+id/lb_pokedex"
+        android:layout_width="81dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:text="POKEDEX"
+        android:textColor="@color/pop_value"
+        android:fontFamily="@font/roboto"
+        app:layout_constraintRight_toLeftOf="@id/sh_pokedex"
+        app:layout_constraintTop_toBottomOf="@id/lb_nivel"
+        app:layout_constraintLeft_toLeftOf="parent"
+         />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
