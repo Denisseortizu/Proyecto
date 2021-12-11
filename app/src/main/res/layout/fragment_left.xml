@@ -74,6 +74,7 @@
         android:layout_marginTop="6dp"
         android:layout_marginRight="68dp"
         android:text="denisseortizu"
+        android:textSize="19dp"
         android:fontFamily="@font/roboto"
         android:textColor="@color/pop_value"
         app:layout_constraintTop_toBottomOf="@id/mostrarNombre"
