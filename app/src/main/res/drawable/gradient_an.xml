@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="rectangle">
+    android:shape="rectangle"
+    >
     <gradient
         android:type="linear"
         android:startColor="@color/pop_value_var"
@@ -8,4 +9,18 @@
         android:endColor="@color/pop_green"
         android:angle="315"
         />
+    <padding
+        android:bottom="5dp"
+        android:left="5dp"
+        android:right="5dp"
+        android:top="5dp" />
+
+
+    <corners
+        android:radius="1dp"
+        android:topLeftRadius="10dp"
+        android:topRightRadius="10dp"
+        android:bottomLeftRadius="10dp"
+        android:bottomRightRadius="10dp"/>
+
 </shape>

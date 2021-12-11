@@ -5,7 +5,7 @@
     android:id="@+id/frameLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/grad_animation"
+    android:backgroundTint="@color/white"
     tools:context=".fragments.PrincipalFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -13,6 +13,7 @@
         android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
         android:fontFamily="@font/roboto"
         android:textColor="@color/pop_yellow"
         android:text="Busqueda"
@@ -23,6 +24,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/accionBusqueda"
 
          />
     <EditText
@@ -33,10 +35,11 @@
         android:fontFamily="@font/roboto"
         android:textColor="@color/pop_yellow"
         android:textSize="18sp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="65dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintBottom_toTopOf="@id/mostrarNombre"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/accionBusqueda"
 />
@@ -48,214 +51,232 @@
         android:backgroundTint="@color/pop_pink"
         android:fontFamily="@font/roboto"
         android:textColor="@color/pop_value"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="65dp"
         android:layout_marginRight="15dp"
         app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintBottom_toTopOf="@id/mostrarNombre"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toRightOf="@id/busqueda"
         />
-    <TextView
-        android:visibility="invisible"
-        android:id="@+id/mostrarNombre"
-        android:layout_width="0dp"
-        android:fontFamily="@font/roboto"
-        android:textColor="@color/pop_pink"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@id/guideline2"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:textAlignment="center"
-        android:text="NOMBRE"
-
-/>
 
 
 
-    <TextView
-        android:visibility="invisible"
-        android:id="@+id/mostrarTipo"
-        android:layout_width="0dp"
-        android:textAlignment="center"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto"
-        android:textColor="@color/pop_pink"
-        app:layout_constraintTop_toBottomOf="@id/mostrarNombre"
-        android:text="TIPO"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        />
-    <ImageView
-        android:visibility="invisible"
-        android:id="@+id/imageView3"
-        android:layout_width="125dp"
-        android:layout_height="114dp"
-        android:src="@drawable/ic_account"
-        app:layout_constraintTop_toBottomOf="@id/mostrarTipo"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="10dp"
-        />
-    <TextView
-        android:visibility="invisible"
-        android:id="@+id/hp"
-        android:fontFamily="@font/roboto"
-        android:textColor="@color/pop_yellow"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="HP"
-        app:layout_constraintRight_toLeftOf="@id/mostrarHp"
-        app:layout_constraintTop_toBottomOf="@id/mostrarTipo"
-        app:layout_constraintLeft_toRightOf="@id/imageView3"
-        />
-    <TextView
-        android:visibility="invisible"
-        android:id="@+id/mostrarHp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto"
-        android:textColor="@color/white"
-        app:layout_constraintTop_toBottomOf="@id/mostrarTipo"
-        app:layout_constraintLeft_toRightOf="@id/hp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginRight="10dp"
-        android:text="HOLA"
-        />
-    <TextView
-        android:visibility="invisible"
-        android:id="@+id/atack"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Attack"
-        android:fontFamily="@font/roboto"
-        android:textColor="@color/pop_yellow"
-        app:layout_constraintRight_toLeftOf="@id/mostrarAtack"
-        app:layout_constraintTop_toBottomOf="@id/hp"
-        app:layout_constraintLeft_toRightOf="@id/imageView3"
-        />
-    <TextView
-        android:visibility="invisible"
-        android:id="@+id/mostrarAtack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto"
-        android:textColor="@color/white"
-        android:text="HOLA"
-        android:layout_marginRight="10dp"
-        app:layout_constraintTop_toBottomOf="@id/mostrarHp"
-        app:layout_constraintLeft_toRightOf="@id/atack"
-        app:layout_constraintRight_toRightOf="parent"
-        />
-    <TextView
-        android:visibility="invisible"
-        android:id="@+id/defense"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto"
-        android:textColor="@color/pop_yellow"
-        android:text="Defense"
-        app:layout_constraintRight_toLeftOf="@id/mostrarDefense"
-        app:layout_constraintTop_toBottomOf="@id/atack"
-        app:layout_constraintLeft_toRightOf="@id/imageView3"
-        />
-    <TextView
-        android:visibility="invisible"
-        android:id="@+id/mostrarDefense"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto"
-        android:textColor="@color/white"
-        android:text="HOLA"
-        android:paddingRight="10dp"
-        app:layout_constraintTop_toBottomOf="@id/mostrarAtack"
-        app:layout_constraintLeft_toRightOf="@id/defense"
-        app:layout_constraintRight_toRightOf="parent"
+    <androidx.cardview.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_marginTop="50dp"
+        android:layout_width="360dp"
+        android:layout_height="200dp"
+        android:id="@+id/card_view"
+        android:backgroundTint="@color/pop_value"
+        android:layout_gravity="center"
+        card_view:layout_constraintTop_toBottomOf="@+id/busqueda"
+        >
 
-        />
-   <TextView
-       android:visibility="invisible"
-       android:layout_width="0dp"
-       android:layout_height="wrap_content"
-       android:fontFamily="@font/roboto"
-       android:textColor="@color/pop_yellow"
-       android:id="@+id/speed"
-       android:text="Speed"
-       app:layout_constraintTop_toBottomOf="@id/defense"
-       app:layout_constraintLeft_toRightOf="@id/imageView3"
-       app:layout_constraintRight_toLeftOf="@id/mostrarSpeed"
-       />
-    <TextView
-        android:visibility="invisible"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto"
-        android:textColor="@color/white"
-        android:id="@+id/mostrarSpeed"
-        android:text="HOLA"
-        app:layout_constraintTop_toBottomOf="@id/mostrarDefense"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/speed"
-        android:layout_marginRight="10dp"/>
-    <TextView
-        android:visibility="invisible"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto"
-        android:textColor="@color/pop_yellow"
-        android:id="@+id/weight"
-        android:text="Weight"
-        app:layout_constraintTop_toBottomOf="@id/speed"
-        app:layout_constraintLeft_toRightOf="@id/imageView3"
-        app:layout_constraintRight_toLeftOf="@id/mostrarWeight"
-        />
-    <TextView
-        android:visibility="invisible"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/mostrarWeight"
-        android:fontFamily="@font/roboto"
-        android:textColor="@color/white"
-        android:text="HOLA"
-        app:layout_constraintTop_toBottomOf="@id/mostrarSpeed"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/weight"
-        android:layout_marginRight="10dp"/>
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/mostrarNombre"
+            android:layout_width="0dp"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/pop_pink"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/guideline2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:textAlignment="center"
+            android:text="NOMBRE"
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_end="507dp" />
+            />
 
-    <Button
-        android:id="@+id/guardarDatos"
-        android:layout_width="32dp"
-        android:layout_height="34dp"
-        android:foreground="@drawable/pokeball"
-        android:foregroundTint="@color/white"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@id/guideline3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/weight" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:fontFamily="@font/roboto"
-        android:textColor="@color/white"
-        android:id="@+id/mostrarID"
-        android:visibility="gone"
-        />
+
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/mostrarTipo"
+            android:layout_width="0dp"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/pop_pink"
+            app:layout_constraintTop_toBottomOf="@id/mostrarNombre"
+            android:text="TIPO"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/imageView3"
+            android:layout_width="125dp"
+            android:layout_height="114dp"
+            android:src="@drawable/ic_account"
+            app:layout_constraintTop_toBottomOf="@id/mostrarTipo"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="10dp"
+            />
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/hp"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/pop_yellow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="HP"
+            app:layout_constraintRight_toLeftOf="@id/mostrarHp"
+            app:layout_constraintTop_toBottomOf="@id/mostrarTipo"
+            app:layout_constraintLeft_toRightOf="@id/imageView3"
+            />
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/mostrarHp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/mostrarTipo"
+            app:layout_constraintLeft_toRightOf="@id/hp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="10dp"
+            android:text="HOLA"
+            />
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/atack"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Attack"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/pop_yellow"
+            app:layout_constraintRight_toLeftOf="@id/mostrarAtack"
+            app:layout_constraintTop_toBottomOf="@id/hp"
+            app:layout_constraintLeft_toRightOf="@id/imageView3"
+            />
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/mostrarAtack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/white"
+            android:text="HOLA"
+            android:layout_marginRight="10dp"
+            app:layout_constraintTop_toBottomOf="@id/mostrarHp"
+            app:layout_constraintLeft_toRightOf="@id/atack"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/defense"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/pop_yellow"
+            android:text="Defense"
+            app:layout_constraintRight_toLeftOf="@id/mostrarDefense"
+            app:layout_constraintTop_toBottomOf="@id/atack"
+            app:layout_constraintLeft_toRightOf="@id/imageView3"
+            />
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/mostrarDefense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/white"
+            android:text="HOLA"
+            android:paddingRight="10dp"
+            app:layout_constraintTop_toBottomOf="@id/mostrarAtack"
+            app:layout_constraintLeft_toRightOf="@id/defense"
+            app:layout_constraintRight_toRightOf="parent"
+
+            />
+        <TextView
+            android:visibility="invisible"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/pop_yellow"
+            android:id="@+id/speed"
+            android:text="Speed"
+            app:layout_constraintTop_toBottomOf="@id/defense"
+            app:layout_constraintLeft_toRightOf="@id/imageView3"
+            app:layout_constraintRight_toLeftOf="@id/mostrarSpeed"
+            />
+        <TextView
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/white"
+            android:id="@+id/mostrarSpeed"
+            android:text="HOLA"
+            app:layout_constraintTop_toBottomOf="@id/mostrarDefense"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/speed"
+            android:layout_marginRight="10dp"/>
+        <TextView
+            android:visibility="invisible"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/pop_yellow"
+            android:id="@+id/weight"
+            android:text="Weight"
+            app:layout_constraintTop_toBottomOf="@id/speed"
+            app:layout_constraintLeft_toRightOf="@id/imageView3"
+            app:layout_constraintRight_toLeftOf="@id/mostrarWeight"
+            />
+        <TextView
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mostrarWeight"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/white"
+            android:text="HOLA"
+            app:layout_constraintTop_toBottomOf="@id/mostrarSpeed"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/weight"
+            android:layout_marginRight="10dp"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_end="377dp" />
+
+        <Button
+            android:id="@+id/guardarDatos"
+            android:layout_width="32dp"
+            android:layout_height="34dp"
+            android:foreground="@drawable/pokeball"
+            android:foregroundTint="@color/white"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/guideline3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/weight" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/white"
+            android:id="@+id/mostrarID"
+            android:visibility="gone"
+            />
+    </androidx.cardview.widget.CardView>
+
+
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="421dp" />
+        app:layout_constraintGuide_begin="546dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
